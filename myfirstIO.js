@@ -5,14 +5,6 @@
 
 var fs = require('fs')
 
-var buf = fs.readFileSync('/path/to/file')
+var contents = process.argv[2];
 
-var str = buf.toString()
-
-var len = str.split('\n').length - 1;
-
-console.log(len);
-
-
-
-
+console.log(fs.readFileSync(file).toString().split('\n').length - 1);
